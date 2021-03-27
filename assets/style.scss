@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+@mixin border-reset {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Poppins;
+
+    .navbar{
+        .navbar-brand{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .collapse{
+            width: 100%;
+            form{
+                width: 50%;
+                .form-control{
+                    border: none;
+                    border-radius: 17px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    @include border-reset();
+                }
+                .btn{
+                    border: none;
+                    border-radius: 17px;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    background-color: transparent;
+                    @include border-reset();
+                    &:hover {
+                        background-color: #198754;
+                    }
+                    i{
+                        color: white;
+                    }
+                }
+            }
+            .cart{
+                margin-left: auto;
+                .btn{
+                    @include border-reset();
+                    i{
+                        color: white;
+                    }
+                }
+            }
+            
+        }
+    }
+    .container{
+        h1{
+            text-align: center;
+            font-weight: 600;
+            margin-top: 7rem;
+            margin-bottom: 3rem;
+        }
+        #selection-movies{
+            .card{
+                &:hover {
+                    transform: scale(1.1);
+                }
+                .card-img-top{
+                    max-height: 259px;
+                    max-width: 259px;
+                    object-fit: cover;
+                }
+                .card-body{
+                    width: 100%;
+                    .card-title{
+                        height: 3.75rem;
+                    }
+                }
+                button{
+                    @include border-reset();
+                }
+            }
+            }
+            
+        .offcanvas-end{
+            width: 60%;
+            .offcanvas-header{
+                button{
+                    @include border-reset();
+                }
+            }
+            .offcanvas-body{
+                table{
+                    width: 100%;
+                    th, td{
+                        width: 20%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background-color: #212529;
+        color: white;
+        padding: 3rem;
+        h6{
+            font-weight: 600;
+            font-size: 20px;
+        }
+        p{
+            font-weight: 300;
+        }
+        a{
+            color: #198754;
+            &:hover {
+                color: #198754;
+                opacity: .5;
+            }
+            
+        }
+        .fab{
+            size: 100%;
+        }
+    }
+}

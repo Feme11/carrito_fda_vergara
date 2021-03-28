@@ -6,4 +6,6 @@
 - Agregar o eliminar datos consumidos en tabla (carrito)
 - Vaciar tabla
 
-### Avances en: https://carrito-fda-vergara.netlify.app/
+### Avances en: 
+* Netlify: https://carrito-fda-vergara.netlify.app/ 
+* Github pages: https://feme11.github.io/carrito_fda_vergara/

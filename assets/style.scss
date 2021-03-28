@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 @mixin border-reset {
-    outline:none !important;
+    outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
@@ -14,89 +14,131 @@ body {
     width: 100%;
     font-family: Poppins;
 
-    .navbar{
-        .navbar-brand{
+    .navbar {
+        .navbar-brand {
+
             font-size: 32px;
             font-weight: 600;
+
+            @media (max-width: 767.98px) {
+                margin-right: auto;
+                margin-left: 1rem;
+            }
         }
-        .collapse{
-            width: 100%;
-            form{
-                width: 50%;
-                .form-control{
-                    border: none;
-                    border-radius: 17px;
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                    @include border-reset();
+
+        form {
+            width: 50%;
+
+            .form-control {
+                border: none;
+                border-radius: 17px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                @include border-reset();
+            }
+
+            .btn {
+                border: none;
+                border-radius: 17px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                background-color: transparent;
+                @include border-reset();
+
+                &:hover {
+                    background-color: #198754;
                 }
-                .btn{
-                    border: none;
-                    border-radius: 17px;
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0;
-                    background-color: transparent;
-                    @include border-reset();
-                    &:hover {
-                        background-color: #198754;
-                    }
-                    i{
-                        color: white;
-                    }
+
+                i {
+                    color: white;
                 }
             }
-            .cart{
-                margin-left: auto;
-                .btn{
-                    @include border-reset();
-                    i{
-                        color: white;
-                    }
+
+            @media (max-width: 767.98px) {
+                width: 100%;
+            }
+        }
+
+        .fixed-top {
+            padding-top: auto;
+            margin-left: auto;
+            width: 100px;
+
+            button {
+                margin-top: 12px;
+                @include border-reset();
+
+                i {
+                    color: white;
                 }
             }
-            
+
         }
+
     }
-    .container{
-        h1{
+
+    .container {
+        h1 {
             text-align: center;
             font-weight: 600;
             margin-top: 7rem;
             margin-bottom: 3rem;
         }
-        #selection-movies{
-            .card{
+
+        #selection-movies {
+
+            .card {
                 &:hover {
                     transform: scale(1.1);
                 }
-                .card-img-top{
+
+                .card-img-top {
                     max-height: 259px;
                     max-width: 259px;
                     object-fit: cover;
                 }
-                .card-body{
+
+                .card-body {
                     width: 100%;
-                    .card-title{
-                        height: 3.75rem;
+                    
+
+                    @media (min-width: 767.98px) {
+                        height: 220px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                        padding: 16px 48px;
+                    }
+
+                    .card-text {
+                        margin: 0;
+                    }
+
+                    .button-add {
+                        @include border-reset();
                     }
                 }
-                button{
-                    @include border-reset();
-                }
             }
-            }
-            
-        .offcanvas-end{
+
+
+
+        }
+
+        .offcanvas-end {
             width: 60%;
-            .offcanvas-header{
-                button{
+
+            .offcanvas-header {
+                button {
                     @include border-reset();
                 }
             }
-            .offcanvas-body{
-                table{
+
+            .offcanvas-body {
+                table {
                     width: 100%;
-                    th, td{
+
+                    th,
+                    td {
                         width: 20%;
                         text-align: center;
                     }
@@ -104,26 +146,32 @@ body {
             }
         }
     }
-    footer{
+
+    footer {
         background-color: #212529;
         color: white;
         padding: 3rem;
-        h6{
+
+        h6 {
             font-weight: 600;
             font-size: 20px;
         }
-        p{
+
+        p {
             font-weight: 300;
         }
-        a{
+
+        a {
             color: #198754;
+
             &:hover {
                 color: #198754;
                 opacity: .5;
             }
-            
+
         }
-        .fab{
+
+        .fab {
             size: 100%;
         }
     }

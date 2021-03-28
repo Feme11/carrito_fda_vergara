@@ -22,27 +22,29 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">OMDb</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex">
-                    <input class="form-control mr-0" type="search" placeholder="Buscar en toda la tienda"
-                        aria-label="Buscar" id="input-title">
-                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                <div class="cart">
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight">
-                        <i class="far fa-shopping-cart" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
-                        <span class="badge bg-success" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">0</span>
-                    </button>
-                </div>
+            <a class="navbar-brand" href="#">OMDb</a>
+            <form class="d-flex">
+                <input class="form-control mr-0" type="search" placeholder="Buscar en toda la tienda"
+                    aria-label="Buscar" id="input-title">
+                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <!-- BOTÓN CARRITO -->
+            <div class="cart fixed-top">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                    <i class="far fa-shopping-cart fa-2x" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                    <span class="badge bg-success" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">0</span>
+                </button>
+            </div>          
+            <!-- X -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
             </div>
         </div>
     </nav>
@@ -85,17 +87,17 @@
 
     <footer>
         <div class="row justify-content-between">
-            <div class="col-3">
+            <div class="col-sm-12 col-md-4 py-4">
                 <h6>Atención Al cliente</h6>
                 <hr>
                 <p>¿Tienes dudas? <br> Déjanos ayudarte, <a href="#">haz clic aquí</a></p>
             </div>
-            <div class="col-3">
+            <div class="col-sm-12 col-md-4 py-4">
                 <h6>Formas de pago</h6>
                 <hr>
                 <img src="https://img.assinaja.com/upl/lojas/panini.cl/imagens/cartoes_img.png" alt="">
             </div>
-            <div class="col-3">
+            <div class="col-sm-12 col-md-4 py-4">
                 <h6>Redes Sociales</h6>
                 <hr>
                 <div class="row">
@@ -113,17 +115,21 @@
 
     <!-- TEMPLATE CARD -->
     <template id="movie-card">
-        <div class="col-md-3 col-sm-6 mb-2 align-self-center">
-            <div class="card m-3">
+        <div class="col-md-3 col-sm-6 mb-2 align-self-start">
+            <div class="card h-100 m-3">
                 <img src="" class="img-fluid card-img-top mx-auto" alt="">
                 <div class="card-body">
                     <h5 class="card-title"></h5>
                     <p class="card-text"><span></span></p>
-                    <button class="button-add btn btn-outline-primary mt-3">Comprar</button>
+                        <button class="button-add btn btn-outline-success">Comprar</button>
                 </div>
-
             </div>
         </div>
+    </template>
+    <!-- X -->
+    <!-- TEMPLATE BUTTON ADD TO SHOPPING CART -->
+    <template id="button-add-cart">
+
     </template>
     <!-- X -->
 

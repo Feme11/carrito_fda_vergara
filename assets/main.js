@@ -41,7 +41,7 @@ if(inputTitle == undefined){
 const getMovies = async() => {
     
     try {
-        const res = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?s=game&page=2&apikey=bfb19173`);
+        const res = await fetch('www.omdbapi.com/?s=game&page=2&apikey=bfb19173');
         const data = await res.json();
         const newData = data.Search
         llenarCards(newData)

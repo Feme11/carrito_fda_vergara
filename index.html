@@ -29,9 +29,9 @@
             </button>
             <a class="navbar-brand" href="#">OMDb</a>
             <form class="d-flex">
-                <input class="form-control mr-0" type="search" placeholder="Buscar en toda la tienda"
+                <input class="form-control mr-0" id="searchTitle" type="search" placeholder="Buscar en toda la tienda"
                     aria-label="Buscar" id="input-title">
-                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                <button class="btn" id="button-search-title" type="submit"><i class="fas fa-search"></i></button>
             </form>
             <!-- BOTÓN CARRITO -->
             <div class="cart fixed-top">
@@ -40,7 +40,9 @@
                     <i class="far fa-shopping-cart fa-2x" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
                     <span class="badge bg-success" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">0</span>
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                        id="badge-value"
+                        >0</span>
                 </button>
             </div>          
             <!-- X -->
@@ -112,11 +114,11 @@
 
 
 
-
+    <!--    etiqueta template es inerte, no se procesa por el navegador hasta que clonamos sus recursos, tiene mayor rendimiento que .innerHTML porque evita el parseo de string a HTML  -->
     <!-- TEMPLATE CARD -->
     <template id="movie-card">
         <div class="col-md-3 col-sm-6 mb-2 align-self-start">
-            <div class="card h-100 m-3">
+            <div class="card m-3">
                 <img src="" class="img-fluid card-img-top mx-auto" alt="">
                 <div class="card-body">
                     <h5 class="card-title"></h5>
@@ -125,11 +127,6 @@
                 </div>
             </div>
         </div>
-    </template>
-    <!-- X -->
-    <!-- TEMPLATE BUTTON ADD TO SHOPPING CART -->
-    <template id="button-add-cart">
-
     </template>
     <!-- X -->
 

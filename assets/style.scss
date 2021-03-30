@@ -83,13 +83,19 @@ body {
             font-weight: 600;
             margin-top: 7rem;
             margin-bottom: 3rem;
+
+            @media (max-width: 767.98px) {
+                margin-top: 9rem;
+            }
         }
 
         #selection-movies {
 
             .card {
-                &:hover {
-                    transform: scale(1.1);
+                @media (min-width: 767.99px) {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
 
                 .card-img-top {
@@ -100,21 +106,27 @@ body {
 
                 .card-body {
                     width: 100%;
-                    
-
-                    @media (min-width: 767.98px) {
-                        height: 220px;
-                    }
 
                     @media (max-width: 767.98px) {
                         padding: 16px 48px;
                     }
+                    
+                    .card-title {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin: 0;
+                        padding: 1rem;
+                    }
 
                     .card-text {
                         margin: 0;
+                        padding: 1rem;
                     }
 
                     .button-add {
+                        
+                        margin: 1rem;
                         @include border-reset();
                     }
                 }
@@ -126,6 +138,9 @@ body {
 
         .offcanvas-end {
             width: 60%;
+            @media (max-width: 767.98px) {
+                width: 100%;
+            }
 
             .offcanvas-header {
                 button {
@@ -134,12 +149,17 @@ body {
             }
 
             .offcanvas-body {
+
+                @media (max-width: 767.98px) {
+                    padding: 1rem .5rem;
+                }
+
                 table {
                     width: 100%;
 
                     th,
                     td {
-                        width: 20%;
+                        //width: 20%;
                         text-align: center;
                     }
                 }

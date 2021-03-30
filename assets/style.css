@@ -74,8 +74,15 @@ body .container h1 {
   margin-top: 7rem;
   margin-bottom: 3rem;
 }
-body .container #selection-movies .card:hover {
-  transform: scale(1.1);
+@media (max-width: 767.98px) {
+  body .container h1 {
+    margin-top: 9rem;
+  }
+}
+@media (min-width: 767.99px) {
+  body .container #selection-movies .card:hover {
+    transform: scale(1.1);
+  }
 }
 body .container #selection-movies .card .card-img-top {
   max-height: 259px;
@@ -85,20 +92,24 @@ body .container #selection-movies .card .card-img-top {
 body .container #selection-movies .card .card-body {
   width: 100%;
 }
-@media (min-width: 767.98px) {
-  body .container #selection-movies .card .card-body {
-    height: 220px;
-  }
-}
 @media (max-width: 767.98px) {
   body .container #selection-movies .card .card-body {
     padding: 16px 48px;
   }
 }
+body .container #selection-movies .card .card-body .card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem;
+}
 body .container #selection-movies .card .card-body .card-text {
   margin: 0;
+  padding: 1rem;
 }
 body .container #selection-movies .card .card-body .button-add {
+  margin: 1rem;
   outline: none !important;
   outline-width: 0 !important;
   box-shadow: none;
@@ -108,6 +119,11 @@ body .container #selection-movies .card .card-body .button-add {
 body .container .offcanvas-end {
   width: 60%;
 }
+@media (max-width: 767.98px) {
+  body .container .offcanvas-end {
+    width: 100%;
+  }
+}
 body .container .offcanvas-end .offcanvas-header button {
   outline: none !important;
   outline-width: 0 !important;
@@ -115,12 +131,16 @@ body .container .offcanvas-end .offcanvas-header button {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
+@media (max-width: 767.98px) {
+  body .container .offcanvas-end .offcanvas-body {
+    padding: 1rem 0.5rem;
+  }
+}
 body .container .offcanvas-end .offcanvas-body table {
   width: 100%;
 }
 body .container .offcanvas-end .offcanvas-body table th,
 body .container .offcanvas-end .offcanvas-body table td {
-  width: 20%;
   text-align: center;
 }
 body footer {

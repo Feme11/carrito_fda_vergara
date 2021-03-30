@@ -1,14 +1,14 @@
-/* GUARDO ID'S */
+/* GUARDO ID'S => tranformo id's de html en const de js */
 const selectionMovies = document.getElementById('selection-movies');
 const items = document.getElementById('items');
 const total = document.getElementById('total');
 
-/* MIS TEMPLATES */
+/* MIS TEMPLATES => tranformo template´s creados en html en const de js */
 const movieCard = document.getElementById('movie-card').content
 const shoppingCartTotal = document.getElementById('shoppingCart-total').content
 const shoppingCartTable = document.getElementById('shoppingCart-table').content
 
-/* FRAGMENT */
+/* FRAGMENT => nos permite guardar una estructura antes de mostrarla en el html, evitamos reflow */
 const fragment = document.createDocumentFragment()
 
 /*SHOPPING-CART VACIO */
@@ -33,15 +33,15 @@ items.addEventListener('click', e => {
     accionarButton(e)
 })
 
-/* let inputTitle;
+let inputTitle
 if(inputTitle == undefined){
     inputTitle = "movie";
-} */
+}
 
 const getMovies = async() => {
     
     try {
-        const res = await fetch('https://www.omdbapi.com/?s=game&page=2&apikey=bfb19173');
+        const res = await fetch(`https://www.omdbapi.com/?s=${inputTitle}&page=2&apikey=bfb19173`);
         const data = await res.json();
         const newData = data.Search
         llenarCards(newData)
@@ -115,7 +115,7 @@ const llenarTotal = () => {
 
     if(Object.keys(shoppingCart).length === 0) {
         total.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
-
+        document.querySelector('#badge-value').innerHTML = 0
         return
     }
 
@@ -125,6 +125,7 @@ const llenarTotal = () => {
 
     shoppingCartTotal.querySelectorAll('td')[0].textContent = nQuantify;
     shoppingCartTotal.querySelector('span').textContent = nPrice;
+    document.querySelector('#badge-value').innerHTML = nQuantify  //cambia valor de badge
 
     const clone = shoppingCartTotal.cloneNode(true)
     fragment.appendChild(clone)
